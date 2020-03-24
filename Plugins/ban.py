@@ -37,7 +37,7 @@ def ban_user(app, message):
                             message.edit(f'@{user_mention(message.text)} is banned')
                             return
                     else:
-                        message.edit('You should use like this ".ban @username"')
+                        message.edit('You should use like this `.ban @username`')
                         return
                 elif message.entities[0].type == 'text_mention':
                     if len(message.text.split()) == 2:
@@ -51,7 +51,7 @@ def ban_user(app, message):
                             message.edit('Yout can\'t ban admin')
                             return
                     else:
-                        message.edit('You should use like this ".ban @username"')
+                        message.edit('You should use like this `.ban @username`')
                         return
 
 
@@ -78,7 +78,7 @@ def unban_user(app, message):
                     message.edit(f'@{user_mention(message.text)} is unbanned')
                     return
                 else:
-                    message.edit('You should use like this ".unban @username"')
+                    message.edit('You should use like this `.unban @username`')
                     return
             elif message.entities[0].type == 'text_mention':
                 if len(message.text.split()) == 2:
@@ -88,7 +88,7 @@ def unban_user(app, message):
                     ))
                     return
                 else:
-                    message.edit('You should use like this ".unban user_mention"')
+                    message.edit('You should use like this `.unban @username`')
                     return
 
 
@@ -127,7 +127,7 @@ def gban_user(app, message):
                             message.edit(f'@{user_mention(message.text)} is gbanned')
                             return
                     else:
-                        message.edit('You should use like this ".gban @username"')
+                        message.edit('You should use like this `.gban @username`')
                         return
                 elif message.entities[0].type == 'text_mention':
                     if len(message.text.split()) == 2:
@@ -144,7 +144,7 @@ def gban_user(app, message):
                             message.edit('Yout can\'t ban admin')
                             return
                     else:
-                        message.edit('You should use like this ".gban @username"')
+                        message.edit('You should use like this `.gban @username`')
                         return
 
 
@@ -175,7 +175,7 @@ def ungban_user(app, message):
                     message.edit(f'@{user_mention(message.text)} is ungbanned')
                     return
                 else:
-                    message.edit('You should use like this ".ungban @username"')
+                    message.edit('You should use like this `.ungban @username`')
                     return
             elif message.entities[0].type == 'text_mention':
                 if len(message.text.split()) == 2:
@@ -187,5 +187,5 @@ def ungban_user(app, message):
                     ))
                     return
                 else:
-                    message.edit('You should use like this ".ungban user_mention"')
+                    message.edit('You should use like this `.ungban @username`')
                     return

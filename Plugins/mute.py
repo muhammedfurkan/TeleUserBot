@@ -67,7 +67,7 @@ def mute_user(app, message):
                             message.edit('Yout can\'t mute admin')
                             return
                     else:
-                        message.edit('You should use like this ".mute @username"')
+                        message.edit('You should use like this `.mute @username`')
                         return
 
 
@@ -113,7 +113,7 @@ def unmute_user(app, message):
                             message.edit(f'@{user_mention(message.text)} is muted')
                             return
                     else:
-                        message.edit('You should use like this ".unmute @username"')
+                        message.edit('You should use like this `.unmute @username`')
                         return
                 elif message.entities[0].type == 'text_mention':
                     if len(message.text.split()) == 2:
@@ -133,7 +133,7 @@ def unmute_user(app, message):
                             message.edit('Yout can\'t unmute admin')
                             return
                     else:
-                        message.edit('You should use like this ".unmute @username"')
+                        message.edit('You should use like this `.unmute @username`')
                         return
 
 
@@ -175,7 +175,7 @@ def tmute_user(app, message):
                                              f'for {datetime.utcfromtimestamp(mute_time(message.text)).strftime("%d days %H hours %M minutes")}')
                                 return
                     else:
-                        message.edit('You should use like this ".tmute @username 1d 1h 1m"')
+                        message.edit('You should use like this `.tmute @username 1d 1h 1m`')
                         return
                 elif message.entities[0].type == 'text_mention':
                     if len(message.text.split()) >= 2:
@@ -193,7 +193,7 @@ def tmute_user(app, message):
                             message.edit('Yout can\'t mute admin')
                             return
                     else:
-                        message.edit('You should use like this ".tmute @username 1d 1h 1m"')
+                        message.edit('You should use like this `.tmute @username 1d 1h 1m`')
                         return
 
 
@@ -227,7 +227,7 @@ def kick_user(app, message):
                             message.edit(f'@{user_mention(message.text)} is kicked')
                             return
                     else:
-                        message.edit('You should use like this ".kick @username"')
+                        message.edit('You should use like this `.kick @username`')
                         return
                 elif message.entities[0].type == 'text_mention':
                     if len(message.text.split()) == 2:
@@ -241,5 +241,5 @@ def kick_user(app, message):
                             message.edit('Yout can\'t kick admin')
                             return
                     else:
-                        message.edit('You should use like this ".kick @username"')
+                        message.edit('You should use like this `.kick @username`')
                         return

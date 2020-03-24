@@ -8,4 +8,4 @@ def ping(client, message):
     message.edit('Pong!')
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
-    message.edit('Pong!\n{}'.format(ms))
+    message.edit('Pong!\n`{}`'.format(ms))
